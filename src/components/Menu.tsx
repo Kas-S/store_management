@@ -9,7 +9,7 @@ function Menu() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
-            <Button onClick={onOpen}>Open</Button>
+            <Button onClick={onOpen}><span className="material-symbols-outlined text-3xl">menu</span></Button>
             <Drawer isOpen={isOpen} onClose={onClose} placement="right">
                 <DrawerOverlay />
                 <DrawerContent>
