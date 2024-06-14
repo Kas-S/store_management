@@ -12,7 +12,7 @@ function MenuItems() {
     return (
         <ul>
             {items.map((item) => (
-                <li><Link to={item[0]}>{item[1]}</Link></li>
+                <li className="mb-7 border-b border-slate-500 text-xl font-sans font-medium"><Link to={item[0]} className="w-full p-3 ">{item[1]}</Link></li>
             ))}
         </ul>
     )
