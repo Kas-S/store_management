@@ -8,10 +8,7 @@ function Navbar() {
                 <Link to="/" className="font-bold text-4xl">SM</Link>
                 <Menu/>
             </nav>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <br/><br/><br/><br/>
         </>
     )
 }
