@@ -1,16 +1,19 @@
 import {signInWithEmailAndPassword} from "firebase/auth"
 import {useState, FormEvent} from "react"
-import {redirect} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import {auth} from "../firebase.ts"
 
 function Login() {
     const [login, setLogin] = useState(""),
-          [password, setPassword] = useState("")
+          [password, setPassword] = useState(""),
+          navigate = useNavigate()
 
     const signIn = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         signInWithEmailAndPassword(auth, login, password)
-            .then(() => redirect("/"))
+            .then(() => {
+                navigate('/')
+            })
             .catch((error: Error) => console.error(error))
     }
 
@@ -29,7 +32,7 @@ function Login() {
                            className="xs:w-[50vw] md:w-[30vw] h-10 rounded border border-black px-3"
                            placeholder="Пароль"/>
                 </div>
-                <input type="submit" value="Войти" className="border-black p-3 font-bold border rounded"/>
+                <button type="submit" className="border-black p-3 font-bold border rounded hover:bg-black hover:text-white transition-all ease-linear">Войти</button>
             </form>
         </main>
     )
