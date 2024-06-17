@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 
 function MenuItems() {
-    const items = [
+    const items: string[][] = [
         ['/profile', "Профиль"],
         ['/store', 'Остатки'],
         ['/history', 'История'],
