@@ -6,8 +6,10 @@ function MenuItems() {
         ['/store', 'Остатки'],
         ['/history', 'История'],
         ['/price', 'Прайс'],
+        ['/clients', 'Клиенты'],
         ['/sell', 'Продажа'],
-        ['/supply', 'Поступление']
+        ['/supply', 'Поступление'],
+        ['/logout', 'Выйти']
     ]
     return (
         <ul>
