@@ -7,6 +7,7 @@ function MenuItems() {
         ['/history', 'История'],
         ['/price', 'Прайс'],
         ['/clients', 'Клиенты'],
+        ['/providers', 'Поставщики'],
         ['/sell', 'Продажа'],
         ['/supply', 'Поступление'],
         ['/logout', 'Выйти']
