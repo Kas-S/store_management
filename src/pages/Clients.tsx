@@ -28,7 +28,7 @@ function Clients() {
                         ['Удалить', '/clients/delete/' + client.cid, "bg-red-600"]
                     ]
                     return (
-                        <tr className="pt-4 text-xl">
+                        <tr className="pt-4 text-xl" key={client.cid}>
                             <td className="text-center pt-4 pb-4 border-2 border-solid">{client.name}</td>
                             <td className="text-center border-2 border-solid">{client.contact}</td>
                             <td className="border-2 border-solid text-center text-lg">
