@@ -6,6 +6,7 @@ import {Layout, Home, Login, Profile, Store, Operations, Price, Clients, Provide
 import {auth} from "./firebase.ts"
 import {UserContext} from "./UserContext.ts"
 import {User} from "firebase/auth"
+import AddClient from "./pages/AddClient.tsx";
 
 function App() {
   const [user, setUser] = useState<User | null>(null)
@@ -26,6 +27,7 @@ function App() {
                         <Route path="/history" element={<Operations/>}/>
                         <Route path="/price" element={<Price/>}/>
                         <Route path="/clients" element={<Clients/>}/>
+                        <Route path="/clients/new/" element={<AddClient/>}/>
                         <Route path="/providers" element={<Providers/>}/>
                         <Route path="/sell" element={<Sell/>}/>
                         <Route path="/supply" element={<Supply/>}/>

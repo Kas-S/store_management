@@ -10,7 +10,9 @@ import Providers from "./Providers.tsx"
 import Sell from "./Sell.tsx"
 import Supply from "./Supply.tsx"
 import Logout from "./Logout.tsx"
+import AddClient from "./AddClient.tsx"
 
 export {Layout, Home, Login, Profile,
         Store, Operations, Price, Clients,
-        Providers, Sell, Supply, Logout}
+        Providers, Sell, Supply, Logout,
+        AddClient}
