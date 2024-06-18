@@ -2,14 +2,7 @@ import {useEffect, useState} from "react"
 import {Link} from "react-router-dom"
 import {getDocs, collection} from "firebase/firestore"
 import {db} from "../firebase.ts"
-
-type Client = {
-    name: string,
-    contact: string,
-    cid: string,
-    admin: string,
-    regDate: string
-}
+import {Client} from "../types.ts"
 
 function Clients() {
     const [renderedClients, setRenderedClients] = useState<JSX.Element[]>([])
