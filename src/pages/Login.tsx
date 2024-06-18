@@ -1,9 +1,13 @@
 import {signInWithEmailAndPassword} from "firebase/auth"
-import {useState, FormEvent} from "react"
+import {useState, FormEvent, useEffect} from "react"
 import {useNavigate} from "react-router-dom"
 import {auth} from "../firebase.ts"
 
 function Login() {
+    useEffect(() => {
+        document.title = "Вход"
+    }, [])
+
     const [login, setLogin] = useState(""),
           [password, setPassword] = useState(""),
           navigate = useNavigate()
