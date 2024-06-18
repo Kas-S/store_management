@@ -2,11 +2,15 @@ import {useState, useEffect} from "react"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {ChakraProvider} from "@chakra-ui/react"
 import {onAuthStateChanged} from "firebase/auth"
-import {Layout, Home, Login, Profile, Store, Operations, Price, Clients, Providers, Sell, Supply, Logout} from "./pages"
+import {
+    Layout, Home, Login, Profile,
+    Store, Operations, Price, Clients,
+    Providers, Sell, Supply, Logout,
+    EditClient, AddClient
+} from "./pages"
 import {auth} from "./firebase.ts"
 import {UserContext} from "./UserContext.ts"
 import {User} from "firebase/auth"
-import AddClient from "./pages/AddClient.tsx";
 
 function App() {
   const [user, setUser] = useState<User | null>(null)
@@ -28,6 +32,7 @@ function App() {
                         <Route path="/price" element={<Price/>}/>
                         <Route path="/clients" element={<Clients/>}/>
                         <Route path="/clients/new/" element={<AddClient/>}/>
+                        <Route path="/clients/edit/:cid" element={<EditClient/>}/>
                         <Route path="/providers" element={<Providers/>}/>
                         <Route path="/sell" element={<Sell/>}/>
                         <Route path="/supply" element={<Supply/>}/>

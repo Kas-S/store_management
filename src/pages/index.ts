@@ -11,8 +11,9 @@ import Sell from "./Sell.tsx"
 import Supply from "./Supply.tsx"
 import Logout from "./Logout.tsx"
 import AddClient from "./AddClient.tsx"
+import EditClient from "./EditClient.tsx"
 
 export {Layout, Home, Login, Profile,
         Store, Operations, Price, Clients,
         Providers, Sell, Supply, Logout,
-        AddClient}
+        AddClient, EditClient}
