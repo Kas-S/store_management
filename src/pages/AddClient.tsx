@@ -14,14 +14,14 @@ function AddClient() {
     }, [])
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const cid = (Date() + Math.random()).toString()
+        const cid = (Date.now() + Math.random()).toString()
         setDoc(doc(db, "clients", cid),
             {
                 name: name,
                 contact: contact,
                 admin: user?.displayName,
                 regDate: new Date().toISOString(),
-                cid: (Date() + Math.random()).toString()
+                cid: cid
             }).then(() => {
                 navigate("/clients")
         })
