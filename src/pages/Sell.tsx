@@ -4,8 +4,8 @@ import {useDivideClientsByNameAndID, useFetchClients} from "../hooks"
 
 function Sell() {
     const [clientNames, clientIDs] = useDivideClientsByNameAndID(useFetchClients())
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [client, setClient] = useState<string>("")
+    console.log(client) // to fix production
     return (
         <form className="flex items-center flex-col">
             <h1>Продажа</h1>
