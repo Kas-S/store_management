@@ -13,8 +13,12 @@ function Layout() {
     }, [user]);
     return (
         <>
-            <Navbar/>
-            <Outlet/>
+            <header>
+                <Navbar/>
+            </header>
+            <main>
+                <Outlet/>
+            </main>
         </>
     )
 }
