@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-import {Menu} from "./"
+import {Menu} from "../index.ts"
 
 function Navbar() {
     return (

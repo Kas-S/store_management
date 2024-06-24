@@ -3,7 +3,7 @@ import {
     DrawerHeader, DrawerOverlay, DrawerContent,
     DrawerCloseButton, Button, useDisclosure
 } from "@chakra-ui/react"
-import {MenuItems} from "./"
+import {MenuItems} from "../index.ts"
 
 function Menu() {
     const { isOpen, onOpen, onClose } = useDisclosure()
