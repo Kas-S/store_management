@@ -1,11 +1,4 @@
-import {Dispatch, SetStateAction} from "react"
-
-type formInput = {
-    title: string,
-    name: string,
-    type: string,
-    handler: Dispatch<SetStateAction<string>>
-}
+import {formInput} from "../types.ts"
 
 function FormInput(props: formInput) {
     return (
