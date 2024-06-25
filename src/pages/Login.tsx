@@ -1,18 +1,21 @@
-import {signInWithEmailAndPassword} from "firebase/auth"
+import {signInWithEmailAndPassword, onAuthStateChanged} from "firebase/auth"
 import {useState, FormEvent, useEffect} from "react"
 import {useNavigate} from "react-router-dom"
 import {auth} from "../firebase.ts"
 import {FormInput} from "../components"
 
 function Login() {
-    useEffect(() => {
-        document.title = "Вход"
-    }, [])
-
     const [login, setLogin] = useState(""),
           [password, setPassword] = useState(""),
           navigate = useNavigate()
-
+    useEffect(() => {
+        document.title = "Вход"
+        onAuthStateChanged(auth, () => {
+            if (auth.currentUser) {
+                navigate("/")
+            }
+        })
+    }, [])
     const signIn = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         signInWithEmailAndPassword(auth, login, password)

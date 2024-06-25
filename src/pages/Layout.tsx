@@ -1,16 +1,16 @@
+import {useEffect} from "react"
 import {Outlet, useNavigate} from "react-router-dom"
+import {onAuthStateChanged} from "firebase/auth"
 import {Navbar} from "../components"
-import {useContext, useEffect} from "react";
-import {UserContext} from "../UserContext.ts";
+import {auth} from "../firebase.ts"
 
 function Layout() {
-    const user = useContext(UserContext),
-        navigate = useNavigate()
+    const navigate = useNavigate()
     useEffect(() => {
-        if (!user) {
-            navigate("/login")
-        }
-    }, [user]);
+        onAuthStateChanged(auth, () => {
+            if (!auth.currentUser) return navigate("/login")
+        })
+    }, [])
     return (
         <>
             <header>
