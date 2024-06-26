@@ -6,7 +6,7 @@ function Price() {
     return (
         <div className="mx-auto px-5">
             <h1 className="text-2xl text-center font-bold">Прайс лист</h1>
-            <Table fields={["Название", "Группа", "Цена"]} cell_width="w-1/3">
+            <Table fields={["Название", "Группа", "Цена"]} cellWidth="w-1/3">
                 {products.map((v) => (
                     <tr key={v.id}>
                         <td className="border-2 border-solid">{v.name}</td>

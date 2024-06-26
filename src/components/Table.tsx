@@ -2,7 +2,7 @@ import {PropsWithChildren} from "react"
 
 type tableProps = {
     fields: string[],
-    cell_width: string
+    cellWidth: string
 }
 
 function Table(props: PropsWithChildren<tableProps>) {
@@ -11,7 +11,7 @@ function Table(props: PropsWithChildren<tableProps>) {
             <thead>
                 <tr>
                     {props.fields.map(field => (
-                        <th className={"pt-4 border-2 border-solid " + props.cell_width} key={field}>{field}</th>
+                        <th className={"pt-4 border-2 border-solid " + props.cellWidth} key={field}>{field}</th>
                     ))}
                 </tr>
             </thead>

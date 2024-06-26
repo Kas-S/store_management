@@ -51,7 +51,7 @@ function Clients() {
             <div className="flex w-full justify-end items-end">
                 <Link to="/clients/new" className="p-3 font-bold bg-emerald-500 text-white rounded-lg">Добавить клиента</Link>
             </div>
-            <Table fields={["Имя", "Контакт", "Действия"]}>
+            <Table fields={["Имя", "Контакт", "Действия"]} cellWidth="w-1/3">
                 {renderClients(clients)}
             </Table>
         </main>
