@@ -1,4 +1,4 @@
-import {Dispatch, SetStateAction} from "react";
+import {Dispatch, SetStateAction} from "react"
 
 export type Client = {
     name: string,
@@ -21,4 +21,12 @@ export type formInput = {
     name: string,
     type: string,
     handler: Dispatch<SetStateAction<string>>
+}
+
+export type Product = {
+    id: string,
+    name: string,
+    group: string,
+    price: number,
+    quantity: number
 }
