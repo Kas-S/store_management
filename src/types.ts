@@ -28,5 +28,6 @@ export type Product = {
     name: string,
     group: string,
     price: number,
-    quantity: number
+    quantity: number,
+    currency: "USD" | "UZS"
 }
